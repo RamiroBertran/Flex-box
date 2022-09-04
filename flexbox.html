@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>finalltry</title>
+
+	<style type="text/css" media="all">
+		* {
+			box-sizing:content-box;
+			overflow:hidden;
+			
+		}
+
+		body { 
+			width:100vw;
+			height:100vh;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			background-color:#2B4865;
+		}
+
+		.flex-container { 
+			width:800px;
+			height:800px;
+			display:absolute;
+			border-radius:2%; 
+			border:9px solid black;
+		}
+
+
+		.header { 
+			width:100%;
+			height:8%;
+			border-radius:2% 2% 0 0;
+			background-color:#002B5B;
+			display:flex;
+			flex-flow:row nowrap;
+			justify-content:flex-start;
+			align-items:center;
+		}	
+
+		.header > .item1, .item2 , .item3 { 
+			width:20px;
+			height:20px;
+			border-radius:50%;
+			margin-left:8px;
+		}
+		.item1 { 
+			background-color:#2B4865;
+		}
+		.item2 { 
+			background-color:#256D85;
+		}
+		.item3 {
+			background-color:#8FE3CF;
+		}
+
+		.items-container {
+			width:100%;
+			height:92%;
+			display:flex;
+			flex-flow:row wrap;
+			align-content:space-evenly;
+			background-color:#256D85;
+
+		}
+
+		.doble { 
+			width:100%;
+			height:25%;
+			display:flex; 
+			flex-flow:row wrap;
+			margin:0 10px 0 10px;
+			gap:5px;
+		}
+		.item1-1, .item1-2 {
+			height:100%;
+
+			
+		}
+
+		.item1-1 {
+			flex-grow:3;
+			margin:0 2.5px 0 0; 
+			order:1;
+		}
+
+		.item1-2 {
+			flex-grow:1;
+			margin:0 0 0 2.5px; 
+			order:2;
+		}
+
+		.triple { 
+			width:100%;
+			height:50%;
+			margin:0 10px 0 10px;
+			display:flex;
+			flex-flow:row wrap;
+			gap:5px;
+		}
+
+		.item3-1 { 
+			order:1;
+			height:100%;
+			flex-grow:1;
+		}
+		.doble-2 {
+			display:flex;
+			flex-flow:column wrap; 
+			justify-content:space-between;
+			align-items:center;
+			order:2;
+			flex-grow:1;
+			margin:0 0 0 2.5px; 
+			gap:10px;
+		}
+
+		.item3-2 {
+			width:100%;
+			flex-grow:1;
+		}
+		.item3-3 {
+			width:100%;
+			flex-grow:1;
+		}
+
+
+
+		.triple-2 {
+			width:100%;
+			height:20%;
+			margin:0 10px 0 10px;
+			display:flex;
+			flex-flow:row wrap; 
+			justify-content:space-evenly;
+			gap:10px;
+
+		}
+
+	
+		.item3-2-1 {
+			order:1;
+			flex-grow:1;
+		}
+		.item3-2-2 {
+			order:2;
+			flex-grow:1;
+		}
+		.item3-2-3 {
+			order:3;
+			flex-grow:1;
+		}
+
+		.item1-1, .item1-2, .item3-1, .item3-2, .item3-3, .item3-2-1, .item3-2-2,  .item3-2-3 {
+			background-color:#8FE3CF;
+			border-radius:8px;
+		}
+
+
+			
+
+
+	</style>
+	
+</head>
+<body>
+	<!-- primero creamos el contenedor de todos los items, y el header incluido --> 
+		<div class="flex-container">
+			<!-- Se crea el header --> 
+			<div class="header">
+			<div class="item1"></div>
+			<div class="item2"></div>
+			<div class="item3"></div>
+			</div>
+			<!-- se crea el contenedor de los items --> 
+			<div class="items-container">
+			<div class="doble" style="order:1;">
+			<div class="item1-1"></div>
+			<div class="item1-2"></div>
+			</div>
+			<div class="triple" style="order:2;">
+				<div class="item3-1"></div>
+				<!-- separe el item grande de los dos chicos con otro contenedor --> 
+				<div class="doble-2">
+				<div class="item3-2"></div>
+				<div class="item3-3"></div>
+				</div>
+			</div>
+			<div class="triple-2" style="order:3;">
+				<div class="item3-2-1"></div>
+				<div class="item3-2-2"></div>
+				<div class="item3-2-3"></div>
+			</div>
+			</div>
+		</div>
+</body>
+</html>
